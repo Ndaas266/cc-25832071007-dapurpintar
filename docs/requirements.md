@@ -1,25 +1,26 @@
 # Requirements
 
 ## Problem Statement
-Mahasiswa yang belajar mandiri di luar jam kuliah sering tidak memperoleh penjelasan yang cepat dan sesuai materi dalam Bahasa Indonesia. Alat AI umum tersedia, tetapi tidak selaras dengan materi PTI 2802 dan sering langsung memberi jawaban akhir tanpa pembimbingan. (Status: hipotesis, belum diverifikasi dengan survei.)
+Pengguna sering kesulitan menentukan menu dari bahan makanan yang sudah tersedia, terutama pemula memasak dan pengguna dengan bahan terbatas. Pengguna juga belum tentu mengetahui bahan tambahan yang benar-benar diperlukan. (Status: hipotesis, belum diverifikasi dengan survei.)
 
 ## Target Users
-- Mahasiswa S1 yang belajar mandiri, memakai ponsel atau laptop.
+- Mahasiswa dan anak kos, keluarga, pemula memasak, dan pengguna umum.
 - Pengelola: mahasiswa pengembang.
 
 ## Functional Requirements
-- FR-01 Login pengguna (rencana M05).
-- FR-02 Antarmuka chat tutor AI (rencana).
-- FR-03 Riwayat percakapan persisten (rencana M05).
-- FR-04 Endpoint GET /health (tersedia pada M03).
-- FR-05 Kuota per pengguna (rencana).
-- FR-06 Penanganan galat API LLM (rencana).
+- FR-01 Pengguna dapat memasukkan bahan makanan dan preferensi (jenis menu, waktu, porsi, pantangan) (rencana).
+- FR-02 Sistem menghasilkan beberapa rekomendasi menu melalui AI API (rencana).
+- FR-03 Endpoint GET /health (tersedia pada M03).
+- FR-04 Sistem menampilkan detail resep: bahan, takaran, dan langkah memasak (rencana).
+- FR-05 Sistem membatasi jumlah permintaan per pengguna untuk mengendalikan biaya AI (rencana).
+- FR-06 Pengguna dapat melihat riwayat resep (rencana, M05).
+- FR-07 Sistem menangani galat AI API (timeout, kuota habis) dengan pesan yang jelas (rencana).
 
 ## Non-Functional Requirements
 - NFR-01 backend loopback-only
 - NFR-02 application managed by systemd
 - NFR-03 public request through reverse proxy
-- NFR-04 no secret in repository
+- NFR-04 no secret in repository; API key AI hanya di environment server
 
 ## Constraints
 - Acuan modul: 1 vCPU, 1 GB RAM, 20 GB disk

@@ -1,4 +1,4 @@
-# Asisten Belajar
+# DapurPintar
 
 Cloud Computing — PTI 2802  
 Pertemuan 3 — Project Inception
@@ -7,15 +7,21 @@ Pertemuan 3 — Project Inception
 Amanda Fatihatul Ilmi / 25832071007 / 2A
 
 ## Problem
-Mahasiswa yang belajar mandiri di luar jam kuliah sering tidak memperoleh penjelasan yang cepat dan sesuai materi dalam Bahasa Indonesia. (Hipotesis, belum diverifikasi dengan survei.)
+Pengguna sering kesulitan menentukan menu dari bahan makanan yang sudah tersedia, terutama pemula memasak dan pengguna dengan bahan terbatas. (Hipotesis, belum diverifikasi dengan survei.)
 
 ## Target Users
-Mahasiswa S1 yang belajar mandiri, memakai ponsel atau laptop.
+Mahasiswa dan anak kos, keluarga, pemula memasak, dan pengguna umum.
 
 ## Features M03
 - baseline application
 - health endpoint
 - VPS deployment
+
+## Planned Features
+- input bahan makanan dan preferensi (waktu, porsi, pantangan)
+- rekomendasi menu melalui AI API
+- detail resep (bahan, takaran, langkah)
+- riwayat resep
 
 ## Architecture
 
@@ -51,6 +57,7 @@ See `docs/deployment.md`.
 
 ## Current Limitations
 - HTTP only
+- no AI integration yet
 - no persistent database
 - no container
 - manual deployment
